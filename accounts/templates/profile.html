@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content%}
+<div class="container">
+    
+<h2><b>{% block page_title %}{{user}}'s profile{%endblock%}</b></h2>
+<p>Email: ({{ profile.email }})</p>
+
+    
+    <h3>You currently have {{ service_count }} items in your cart, you can purchase them <a href="{% url 'view_cart' %}">here</a>, or you can <a href="{% url 'services' %}">keep shopping</a>.</h3> 
+           
+
+</div>
+{% endblock %}
